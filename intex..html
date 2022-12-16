@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.css">
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+
+
+        *,
+        *::before,
+        *::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: 0;
+            ([class^="fa"]) 
+             font-family: 'Poppins', sans-serif !important;
+
+        }
+        a,
+        a:link,
+        a:visited{
+            text-decoration: none; 
+            outline: none;
+            border: none;
+        }
+
+        ul,
+        li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        section,
+        span,
+        p{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            border: none;
+        }
+
+        .container{
+            max-width: 1178px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .header{
+            background-image: url(img/nordwood-themes-ivP3TYdLvw0-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+
+        }
+
+        .header-navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 55px 0;
+        }
+
+        .header-logo{
+            font-size: 16px;
+            letter-spacing: 2px;
+            border-bottom: 5px solid black;
+            border-radius: 35px;
+            padding-bottom: 5px;
+        }
+
+        ul{
+            display: flex;
+        }
+        li{
+            margin-left: 27px;
+        }
+
+        li:first-child{
+            margin-right: 60px;
+        }
+
+        a{
+            color: black;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .header-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        h1{
+            font-size: 8.5rem;
+            font-weight: 100;
+            line-height: 0.4;
+            letter-spacing: 2px;
+            font-family: 'Herr Von Muellerhoff', cursive;
+            color: #745b37;
+        }
+        
+        .first-letter{
+            font-size: 10.3rem;
+            font-family: 'Herr Von Muellerhoff', cursive;
+            color: #745b37;
+        }
+
+        h3{
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+
+        .btn-coffee{
+            display: block;
+            background-color: #745b37;
+            color: white;
+            padding: 10px 15px;
+            border-top-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-coffee::after{
+            content: "BUY";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #5b2a02;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .5s;
+
+        }
+
+        .btn-coffee:hover::after{
+            top: 0;
+        }
+
+
+        /*ABOUT*/
+        
+        .about{
+            margin-bottom: 150px;
+        }
+
+        .about-title{
+            margin: 60px 0;
+        }
+
+        .about-title h2{
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            color: #5b2a02;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .about-title h2::after{
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: #5b2a02;
+            margin: 0 auto;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .about-content{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+        }
+
+        .about-img {
+            width: 40%;
+        }
+
+        .about-img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text{
+            width: 50%;
+        }
+
+        h4{
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 60px;
+            color: #745b37;
+            font-family: 'Herr Von Muellerhoff', cursive;
+            letter-spacing: 0.5rem;
+            font-weight: 100;
+
+          
+        }
+
+        #asterisk{
+            color: #745b37;
+            margin-bottom: 25px;
+            text-align: center;
+            
+        }
+
+        .about-text p{
+            font-size: 15px;
+            text-align: center;
+            color: #2c2727;
+        }
+
+        /*about finish*/
+
+        /*portfolio start*/
+
+        .portfolio{
+            display: flex;
+            flex-wrap: wrap;
+            
+            
+        }
+
+        .portfolio-item{
+            width: 25%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .portfolio-item img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .overlay{
+            width: 100%;
+            height: 100%;
+            background-color: #5b2a02;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0.8;
+            color: white;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+        }
+
+        .portfolio-item:hover .overlay{
+            top: 0;
+        }
+
+        .portfolio-item:hover img{
+            transform: scale(1.1);
+        }
+
+        /*portfolio finish*/
+
+        /*discover start*/
+        .contact{
+            padding: 10px 0;
+        }
+        .contact h2{
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            color: #5b2a02;
+            font-size: 30px;
+            font-weight: 600; 
+        }
+
+        .contact h2::after{
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: #5b2a02;
+            margin: 0 auto;
+            display: block;
+            margin-top: 10px; 
+        }
+        .contact-content{
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .contant-item{
+            display: flex;
+            align-items: center;
+            flex-basis: 33%;
+            margin-bottom: 100px;
+            flex-direction: column;
+        }
+
+        .contant-item i{
+            font-size: 25px;
+            margin-bottom: 30px;
+            color: #5b2a02;
+        }
+
+        .contant-item p{
+            font-size: 14px;
+            line-height: 33px;
+        }
+
+        /*discover finish*/
+        
+
+        /*footer start*/
+        .footer h2{
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            color: #5b2a02;
+            font-size: 30px;
+            font-weight: 600;
+            padding: 55px 0;
+        }
+
+        .footer h2::after{
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: #5b2a02;
+            margin: 0 auto;
+            display: block;
+            margin-top: 10px; 
+        }
+
+        .footer{
+            background: black;
+        }
+
+        .footer-copyright{
+            color: white;
+            text-align: center;
+            flex-basis: 55%;
+            line-height: 2;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+
+        .footer-social i{
+            color: white;
+            margin-bottom: 50px;
+            font-size: 25px;
+            padding: 0 40px;
+        }
+
+        .footer-social:first-child{
+            margin-left: 70px;
+        }
+
+
+        /*footer finish*/
+
+        /* about start */
+
+        #menu-icon{
+            font-size: 25px;
+            display: none;
+            margin-left: 20px;
+        }
+
+        @media only screen and (max-width:800px){
+            .header-menu ul{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                background-color: #2b1402da;
+                width: 100%;
+                overflow: hidden;
+                transition: max-height .4s;
+            }
+
+            .header-menu ul li{
+                margin-right: 50px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .header-menu ul li {
+                color: white;
+            }
+
+            .header-menu #menu-icon{
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        /* about finish */
+
+        @media only screen and (max-width:990px){
+            .about-img{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .about-text{
+                width: 100%;
+            }
+
+        }
+
+        /* PORTFOLİO START */
+        @media only screen and (max-width:990px){
+            .portfolio .portfolio-item{
+                flex-basis: 50%;
+            }
+        }
+
+        @media only screen and (max-width:580px){
+            .portfolio .portfolio-item{
+                flex-basis: 100%;
+            }
+        }
+        @media only screen and (max-width:800px){
+           .contact-content{
+               flex-direction: column;
+           } 
+
+           .contant-item{
+               margin-top: 30px;
+           }
+           .contant-item p{
+               width: 100%;
+               text-align: center;
+           }
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header">
+            <div class="container">
+                <div class="header-navbar">
+                    <div class="header-logo">
+                        <h2>COFFEE</h2>
+                    </div>
+                    <div class="header-menu">
+                        <ul id="menuItems">
+                            <li>HOME</li>
+                            <li>ABOUT</li>
+                            <li>DİSCOVER</li>
+                            <li>CONTACT</li>
+                            
+                        </ul>
+                        <i class="fas fa-bars" id="menu-icon" oncLick="menuToggle();"></i>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <h1><span class="first-letter">W</span>elcame</h1>
+                    <h3>TAKE A BREAK WİHT COFFEE</h3>
+                    <a href="#" class="btn-coffee">Get Started</a>
+                
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="about">
+        <div class="about">
+            <div class="container">
+                <div class="about-title">
+                    <h2>ABOUT</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-img anime-left">
+                        <img src="img/nicolas-j-leclercq-dSdGjecqhKA-unsplash.jpg"   alt="">
+                    </div>
+                    <div class="about-text anime-right">
+                        <h4>OUR STORY</h4>
+                        <div id="asterisk">
+                            <i class="fas fa-asterisk"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, praesentium impedit. Voluptate officia accusamus dolorum! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iure.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="portfolio">
+        <div class="portfolio">
+            <div class="portfolio-item ani1"> 
+                <img src="img/foto1(1).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+            </div>
+            
+            <div class="portfolio-item ani2">
+                <img src="img/foto2(2).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+            </div>
+            
+            <div class="portfolio-item ani3">
+                <img src="img/foto3(3).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+                
+            </div>
+            <div class="portfolio-item ani4">
+                <img src="img/foto4(4).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+            </div>
+            
+            <div class="portfolio-item ani5">
+                <img src="img/foto5(5).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+            </div>
+           
+            <div class="portfolio-item ani6">
+                <img src="img/foto6(6).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+            </div>
+            
+            <div class="portfolio-item ani7">
+                <img src="img/foto7(7).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+            </div>
+            
+            <div class="portfolio-item ani8">
+                <img src="img/foto8(8).jpg" alt="">
+                <div class="overlay">
+                    <i class="fas fa-mug-hot"></i>
+               </div>
+
+            </div>
+            
+            
+           
+        </div>
+
+    </section>
+   
+
+    <section id="about">
+        <div class="about">
+            <div class="container">
+                <div class="about-title">
+                    <h2>DİSCOVER</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-img anime-left">
+                        <img src="img/menu.jpg"   alt="">
+                    </div>
+                    <div class="about-text anime-right">
+                        <h4>OUR STORY</h4>
+                        <div id="asterisk">
+                            <i class="fas fa-asterisk"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, praesentium impedit. Voluptate officia accusamus dolorum! <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iure.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <div class="contact">
+            <div class="contanier">
+                <div class="page-tittle">
+                    <h2>CONTANT</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contant-item anime-top">
+                        <i class="fas fa-phone"></i>
+                        <p>054594845**</p>
+                        <br>
+                        <p>043225654**</p>
+                    </div>
+                    <div class="contant-item anime-bottom">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Bahçivan Mahallesi Abdurrahmangazi 3.Sokak Denizyapı Sitesi VAN</p> 
+
+                    </div>
+                    <div class="contant-item anime-top">
+                        <i class="far fa-envelope-open"></i>
+                        <p>ayse.yalvac@hotmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="page-tittle">
+                    <h2>ABOUT US</h2>
+                </div>
+                <div class="footer-copyright">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, deserunt</p>
+                </div>
+                <nav class="footer-social"
+                ><ul>
+                    <li>
+                       <a href="#"><i class="fab fa-google"></i></a>
+                       <a href="#"><i class="fab fa-twitter"></i></a>
+                       <a href="#"><i class="fab fa-facebook"></i></a>
+                       <a href="#"><i class="fab fa-instagram"></i></a>
+                    </li>
+                   
+                </ul>
+               
+            </nav>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        window.sr=ScrollReveal();
+
+        sr.reveal('.anime-left',{
+            origin:'left',
+            duration:1000,
+            distance:'25rem',
+            delay:300
+        });
+        sr.reveal('.anime-right',{
+            origin:'right',
+            duration:1000,
+            distance:'25rem',
+            delay:600
+        });
+        sr.reveal('.anime-top',{
+            origin:'top',
+            duration:1000,
+            distance:'25rem',
+            delay:600
+        });
+        sr.reveal('.anime-bottom',{
+            origin:'bottom',
+            duration:1000,
+            distance:'25rem',
+            delay:600
+        });
+
+    </script>
+
+    <script>
+        ScrollReveal().reveal('.ani1',{delay:250});
+        ScrollReveal().reveal('.ani2',{delay:500});
+        ScrollReveal().reveal('.ani3',{delay:750});
+        ScrollReveal().reveal('.ani4',{delay:1000});
+        ScrollReveal().reveal('.ani5',{delay:1250});
+        ScrollReveal().reveal('.ani6',{delay:1500});
+        ScrollReveal().reveal('.ani7',{delay:1750});
+        ScrollReveal().reveal('.ani8',{delay:2000});
+
+    </script>
+
+    <script>
+        var menuItems=document.getElementById('menuItems');
+        menuItems.style.maxHeight="0px";
+         function menuToggle(){
+             if(menuItems.style.maxHeight=="0px"){
+                 menuItems.style.maxHeight="200px";
+             }else{
+                 menuItems.style.maxHeight="0px"
+             }
+         }
+    </script>
+</body>
+</html>
